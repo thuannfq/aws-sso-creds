@@ -112,5 +112,5 @@ $ aws-sso-creds set <non-SSO profile> -p <SSO profile>
 Assuming you've already added $GOPATH/bin to your $PATH: `export PATH="$PATH:$GOPATH/bin"`
 
 ```
-go install github.com/thuannfq/aws-sso-creds/cmd/aws-sso-creds
+go install github.com/thuannfq/aws-sso-creds/cmd/aws-sso-creds@latest
 ```
