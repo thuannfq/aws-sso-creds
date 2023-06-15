@@ -99,23 +99,16 @@ $ aws-sso-creds list roles <account-id>
 
 _NOTE:_ currently this tool doesn't support multiple roles when getting credentials, if this is necessary, please file a feature request
 
-# Installation
+## Save into AWS credentials and config files
 
-This is a compiled go binary, so just put it in your `$PATH`.
-
-If you're on os x make sure to then run `xattr -d com.apple.quarantine /path/to/aws-sso-creds` to allow it to run.
-
-## Homebrew
-
-A tap is provided to install via [homebrew](homebrew.sh):
-
-```bash
-brew tap jaxxstorm/tap
-brew install aws-sso-creds
+```
+$ aws-sso-creds set <non-SSO profile> -p <SSO profile>
 ```
 
-## Nix
+# Installation
 
-nixpkgs includes [a recipe](https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/admin/aws-sso-creds/default.nix) for `aws-sso-creds`.
-- If [flakes](https://nixos.wiki/wiki/Flakes) are enabled: `nix profile install nixpkgs#aws-sso-creds`
-- Otherwise: `nix-env --install --attr aws-sso-creds`
+## For Go users
+
+```
+go install github.com/thuannfq/aws-sso-creds/cmd/aws-sso-creds
+```
